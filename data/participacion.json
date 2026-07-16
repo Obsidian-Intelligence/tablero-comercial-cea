@@ -1,0 +1,14 @@
+{
+  "fecha_corte": "2026-07",
+  "advertencia": "Participación calculada como proxy: alumnos CEA ÷ matrícula no escolarizada+mixta municipal según última cifra oficial (Formato 911, anual con rezago).",
+  "por_plaza": [
+    {"plaza": "Puebla", "matricula_segmento_municipal": null, "anio_dato": null, "marca": "🎯", "nota": "Por llenar con Formato 911 / Anuario ANUIES municipal"},
+    {"plaza": "Huauchinango", "matricula_segmento_municipal": null, "anio_dato": null, "marca": "🎯", "nota": "idem; referencia: IEDEP tiene sede aquí"},
+    {"plaza": "Zacatlán", "matricula_segmento_municipal": null, "anio_dato": null, "marca": "🎯", "nota": "idem"}
+  ],
+  "serie_cea": [
+    {"anio": 2024, "alumnos": null, "marca": "📊", "nota": "reconstruir con Control Escolar"},
+    {"anio": 2025, "alumnos": null, "marca": "📊", "nota": "reconstruir con Control Escolar"},
+    {"anio": 2026, "alumnos": 110, "marca": "✅"}
+  ]
+}

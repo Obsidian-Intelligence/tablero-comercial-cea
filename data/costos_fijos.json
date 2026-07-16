@@ -1,0 +1,25 @@
+{
+  "nota": "Montos reales extraídos de los Excel de Paola (abril-mayo 2026). Los 📊 son estimaciones desde nóminas históricas: Paola valida.",
+  "moneda": "MXN mensual",
+  "renglones": [
+   {"concepto": "Renta Huauchinango", "monto": 7150, "marca": "✅", "fuente": "ADEUDO DE RENTA (recibo mensual con impuestos)"},
+   {"concepto": "Renta Zacatlán (nuevo edificio)", "monto": 9524, "marca": "✅", "fuente": "Caja chica abril 2026"},
+   {"concepto": "Teléfono/Internet Puebla (Telmex)", "monto": 2289, "marca": "✅", "fuente": "Caja chica abril 2026"},
+   {"concepto": "Teléfono/Internet Zacatlán (Telmex)", "monto": 799, "marca": "✅", "fuente": "Caja chica abril 2026"},
+   {"concepto": "Teléfono/Internet Huauchinango (Telmex)", "monto": null, "marca": "🎯", "nota": "Por llenar — Paola (≈$800-2,300 por analogía)"},
+   {"concepto": "Luz (CFE) Puebla", "monto": 1298, "marca": "✅", "fuente": "Caja chica abril 2026; variable por mes"},
+   {"concepto": "Luz (CFE) Huauchinango y Zacatlán", "monto": null, "marca": "🎯", "nota": "Por llenar — Paola"},
+   {"concepto": "Agua potable", "monto": null, "marca": "🎯", "nota": "Por llenar — Paola"},
+   {"concepto": "Sueldos administrativos (≈11 personas, 3 sedes)", "monto": 60000, "marca": "📊", "fuente": "Concentrado NOMINA.xlsx: suma quincenal 2026 ≈ 55-65K/mes. Paola valida"},
+   {"concepto": "Nómina de maestros (hora $70-100; lic+bach 3 sedes)", "monto": 32000, "marca": "📊", "fuente": "NOMINA_MTROS_ABRIL: subtotal lic Puebla $26,200 + bachillerato. Varía por materias activas"},
+   {"concepto": "IMSS + RCV (Puebla y Zacatlán)", "monto": null, "marca": "🎯", "nota": "Por llenar — Paola (abril incluyó multa $5,435 no recurrente)"},
+   {"concepto": "Infonavit", "monto": null, "marca": "🎯", "nota": "Por llenar — Paola"},
+   {"concepto": "3% sobre nómina", "monto": 1800, "marca": "📊", "nota": "3% de nóminas estimadas (~60K); Paola valida"},
+   {"concepto": "Sistema contable (COI)", "monto": 0, "marca": "✅", "nota": "Licencia cancelada; contabilidad la lleva el despacho externo"},
+   {"concepto": "Limpieza e insumos (3 sedes)", "monto": 1200, "marca": "📊", "fuente": "Caja chica abril: compras de $527-674"},
+   {"concepto": "Titulaciones y certificados (variable, se recupera vía alumno)", "monto": null, "marca": "📊", "fuente": "Caja chica: ~$375/titulación + formatos"},
+   {"concepto": "Pauta publicitaria E6", "monto": 7000, "marca": "✅", "nota": "Presupuesto autorizable $6-8K"},
+   {"concepto": "Campo Sierra E9", "monto": 2000, "marca": "🎯"},
+   {"concepto": "Otros / imprevistos", "monto": null, "marca": "🎯"}
+  ]
+}

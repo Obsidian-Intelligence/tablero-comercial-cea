@@ -1,0 +1,118 @@
+{
+  "fecha_actualizacion": "2026-07-14",
+  "norte": {
+    "titular": "250 alumnos activos hacia jul-2027, cruzando el punto de equilibrio (207) en feb–mar 2027, con el canal de recomendación restaurado a ≥30% de las altas y cobranza ≥90% del facturable.",
+    "metrica_estrella": "ALUMNOS ACTIVOS (Excel maestro, semanal)."
+  },
+  "regla_lectura": {
+    "okr": "OKR = apuesta del trimestre con fecha (se logra o no se logra).",
+    "kr": "KR = el número que demuestra si la apuesta se logró.",
+    "iniciativa": "Iniciativa = trabajo que mueve KRs (las estrategias E1–E10).",
+    "kpi": "KPI = signo vital permanente (se vigila cada lunes en el war room).",
+    "cierre": "Un KR que no aparece en el tablero de los lunes, no existe."
+  },
+  "objetivos_q3": [
+    {
+      "id": "O1",
+      "titulo": "Reencender el motor: volver a inscribir en volumen",
+      "krs": [
+        {"id": "KR1.1", "texto": "48 inscripciones nuevas acumuladas en el trimestre (jul 8 · ago 18 · sep 22)", "marca": "🎯", "avance": null},
+        {"id": "KR1.2", "texto": "≥145 alumnos activos al 30-sep (desde ~110)", "marca": "📊", "avance": null},
+        {"id": "KR1.3", "texto": "Conversión prospecto→inscrito ≥6% en cohorte de 60 días (cohortes jul y ago)", "marca": "🎯", "avance": null},
+        {"id": "KR1.4", "texto": "≥265 prospectos/mes etiquetados por canal desde agosto", "marca": "🎯", "avance": null}
+      ]
+    },
+    {
+      "id": "O2",
+      "titulo": "Que nos vuelvan a recomendar: servicio y comunidad que venden",
+      "krs": [
+        {"id": "KR2.1", "texto": "Bajas ≤4/mes en Q3 (ruta a ≤3 desde nov)", "marca": "📊", "avance": null},
+        {"id": "KR2.2", "texto": "≥15% de las altas de sep llegan por referido (escalón hacia ≥30% en feb-27)", "marca": "🎯", "avance": null},
+        {"id": "KR2.3", "texto": "≥6 reinscripciones \"Regresa y termina\" acumuladas, con 120 ex alumnos contactados", "marca": "🎯", "avance": null},
+        {"id": "KR2.4", "texto": "75 reseñas en Google (25 por sede) con promedio ≥4.6 al 30-sep", "marca": "", "avance": null},
+        {"id": "KR2.5", "texto": "NPS post-trámite ≥50 con tasa de respuesta ≥60%", "marca": "🎯", "avance": null}
+      ]
+    },
+    {
+      "id": "O3",
+      "titulo": "Operar como máquina: velocidad, registro y decisión semanal",
+      "krs": [
+        {"id": "KR3.1", "texto": "Mediana de primera respuesta a prospecto <5 min en horario hábil, sostenida 4 semanas seguidas", "marca": "🎯", "avance": null},
+        {"id": "KR3.2", "texto": "100% de altas con canal_origen y referido_por registrados", "marca": "", "avance": null},
+        {"id": "KR3.3", "texto": "7/7 decisiones de arranque firmadas o rechazadas al 1-ago (tabla precios · premio referidos · pauta · lista bajas · empresas · embajadores · WhatsApp único)", "marca": "", "avance": null},
+        {"id": "KR3.4", "texto": "12 comités de lunes consecutivos, cada uno con UNA decisión ejecutada y registrada", "marca": "", "avance": null},
+        {"id": "KR3.5", "texto": "CAC ponderado ≤$1,500 y costo por inscripción de pauta ≤$1,600 en sep", "marca": "🎯", "avance": null}
+      ]
+    },
+    {
+      "id": "O4",
+      "titulo": "Proteger la caja mientras crecemos",
+      "krs": [
+        {"id": "KR4.1", "texto": "Cobranza ≥85% del facturable en ago y sep (ruta a ≥90%)", "marca": "📊", "avance": null},
+        {"id": "KR4.2", "texto": "100% de pagos capturados el mismo día con folio", "marca": "", "avance": null},
+        {"id": "KR4.3", "texto": "≥60% de alumnos en rojo con convenio firmado o promesa de pago registrada al 30-sep", "marca": "🎯", "avance": null}
+      ]
+    }
+  ],
+  "direccionales": {
+    "q4_2026": {
+      "titulo": "Q4-2026 · Consolidar lo que funciona",
+      "etiqueta": "Se recalibran con datos reales de Q3",
+      "puntos": [
+        "≥169 activos al 31-dic 📊",
+        "Referidos ≥25% de altas",
+        "8 convenios B2B acumulados (4 firmados en los primeros 90 días)",
+        "1ª revisión matar/escalar ejecutada: ≥1 canal escalado y ≥1 corregido o matado CON datos",
+        "Cobranza ≥90%",
+        "Kit temporada enero listo al 15-dic"
+      ]
+    },
+    "q1_2027": {
+      "titulo": "Q1-2027 · Cruzar el equilibrio ★",
+      "etiqueta": "Se recalibran con datos reales de Q3",
+      "puntos": [
+        "Cruce de 207 activos en feb–mar 📊",
+        "≥214 al 31-mar",
+        "Referidos ≥30% de altas",
+        "Bajas ≤3 sostenido",
+        "CAC ponderado ≤$1,200 🎯",
+        "Gate H1→H2 en evaluación formal"
+      ]
+    }
+  },
+  "iniciativas": [
+    {"id": "INI-00", "iniciativa": "War room + tablero + cohortes", "dueno": "Obsidian", "krs": "KR3.1–3.5 (habilita todos)", "incluye": "Tablero 10 KPIs + comité lunes", "costo": "—"},
+    {"id": "INI-E1", "iniciativa": "Servicio que vende (retención)", "dueno": "Mónica/Nelly + coordinadoras", "krs": "KR2.1, KR2.5", "incluye": "Folio+acuse 24h · NPS 1 pregunta · llamada de bienvenida 2º sábado", "costo": "$0"},
+    {"id": "INI-E2", "iniciativa": "Regresa y termina (recuperación)", "dueno": "Asesoras + Angélica", "krs": "KR2.3, KR1.1", "incluye": "Lista bajas 23-26 · guion sin culpa · convenio con condonación condicionada", "costo": "$0", "alerta": "PERECEDERO: Angélica se retira en ~4 meses"},
+    {"id": "INI-E3", "iniciativa": "Tubería bachillerato→licenciatura", "dueno": "Gasga + asesoras", "krs": "KR1.1", "incluye": "Plática 15 min en aula · beca continuidad 10% 🎯", "costo": "Beca 10%"},
+    {"id": "INI-E4", "iniciativa": "Referidos \"Trae a tu compañero\"", "dueno": "Coordinadoras", "krs": "KR2.2, KR1.1", "incluye": "1 mes gratis al que refiere (paga 2ª mensualidad del referido) · 50% inscripción al referido 🎯 · estímulo docente $300–500 🎯", "costo": "Se paga solo con resultados"},
+    {"id": "INI-E5", "iniciativa": "Convenios B2B (canal del dueño)", "dueno": "Eduardo + asesora sr.", "krs": "KR1.1, Q4", "incluye": "Cartera despacho · carta modelo · COPARMEX Puebla · meta 4 firmas/90 días", "costo": "~$0"},
+    {"id": "INI-E6", "iniciativa": "Pauta Meta hiperlocal", "dueno": "C. Gutiérrez + Obsidian", "krs": "KR1.4, KR1.1, KR3.5", "incluye": "CPL $60–150 🎯 · regla dura: matar >$2,000/inscripción 2 meses; duplicar <$1,200", "costo": "$6–8K/mes"},
+    {"id": "INI-E7", "iniciativa": "Ficha Google + reseñas", "dueno": "C. Gutiérrez", "krs": "KR2.4, KR1.4", "incluye": "3 fichas reclamadas · QR en entrega de certificados · responder todo <72h", "costo": "$0"},
+    {"id": "INI-E8", "iniciativa": "Hermes (radar B2B con IA)", "dueno": "Obsidian", "krs": "Alimenta E5", "incluye": "10 oportunidades calificadas/mes · humano aprueba SIEMPRE · solo fuentes públicas (LFPDPPP)", "costo": "—"},
+    {"id": "INI-E9", "iniciativa": "Campo Sierra (HUA/ZAC)", "dueno": "Margarita · Teresa/Jesús", "krs": "KR1.4, KR1.1", "incluye": "Perifoneo · radio · lonas QR · módulo en tianguis con alumno testimonio", "costo": "$1.5–3K/mes temporada"},
+    {"id": "INI-E10", "iniciativa": "+$150 a nuevos ingresos", "dueno": "Eduardo + Paola", "krs": "KR4.1, equilibrio", "incluye": "Tabla única de precios · equivale a +25 alumnos sin costo de adquisición 📊", "costo": "$0 directo"}
+  ],
+  "kpis_permanentes": [
+    {"n": 1, "kpi": "Alumnos activos vs 207 y 250", "fuente": "Excel maestro", "frecuencia": "Semanal", "dueno": "Eduardo", "meta": "Tendencia neta ≥ +10/mes", "contra": "—"},
+    {"n": 2, "kpi": "Prospectos nuevos por canal", "fuente": "Excel de Ventas", "frecuencia": "Semanal", "dueno": "C. Gutiérrez", "meta": "≥66/sem", "contra": "Conversión por canal (volumen basura no vale)"},
+    {"n": 3, "kpi": "Mediana 1ª respuesta", "fuente": "Excel de Ventas/WhatsApp", "frecuencia": "Semanal", "dueno": "Asesoras", "meta": "<5 min 🎯", "contra": "NPS (rápido y mal atendido no sirve)"},
+    {"n": 4, "kpi": "Citas agendadas", "fuente": "Excel de Ventas", "frecuencia": "Semanal", "dueno": "Asesoras", "meta": "≥25/sem 🎯", "contra": "% citas que asisten"},
+    {"n": 5, "kpi": "Inscripciones por canal", "fuente": "Excel maestro", "frecuencia": "Semanal", "dueno": "Paola", "meta": "≥4/sem", "contra": "Bajas a 90 días (inscribir por inscribir revienta)"},
+    {"n": 6, "kpi": "Conversión cohorte 60 días", "fuente": "Excel de Ventas", "frecuencia": "Mensual", "dueno": "Obsidian", "meta": "≥6% 🎯", "contra": "Ticket promedio (no regalar becas para cerrar)"},
+    {"n": 7, "kpi": "Costo por inscripción por canal", "fuente": "Gastos + Excel de Ventas", "frecuencia": "Mensual", "dueno": "Obsidian", "meta": "≤$1,500 ponderado 🎯", "contra": "Volumen (barato sin volumen no escala)"},
+    {"n": 8, "kpi": "% altas por referido", "fuente": "Excel maestro", "frecuencia": "Mensual", "dueno": "Coordinadoras", "meta": "≥30% a feb-27", "contra": "Premios pagados vs permanencia"},
+    {"n": 9, "kpi": "Bajas del mes", "fuente": "Excel maestro", "frecuencia": "Mensual", "dueno": "Control Escolar", "meta": "≤3 📊", "contra": "Rigidez (retener a la fuerza genera queja)"},
+    {"n": 10, "kpi": "Cobranza % del facturable", "fuente": "Excel maestro", "frecuencia": "Semanal", "dueno": "Paola", "meta": "≥90%", "contra": "Quejas por cobranza (umbral 1/100 mensajes)"},
+    {"n": 11, "kpi": "NPS post-trámite", "fuente": "Encuesta", "frecuencia": "Mensual", "dueno": "Control Escolar", "meta": "≥50 🎯", "contra": "Tasa de respuesta ≥60%"},
+    {"n": 12, "kpi": "Reseñas Google (# y promedio)", "fuente": "Google Business Profile (GBP)", "frecuencia": "Mensual", "dueno": "C. Gutiérrez", "meta": "25/sede, ≥4.6", "contra": "Autenticidad (cero reseñas compradas)"}
+  ],
+  "cadencia": [
+    "Lunes 30 min: tablero KPIs + avance KRs + UNA decisión ejecutable.",
+    "Mensual: score de KRs (0.0–1.0); <0.3 exige plan correctivo o kill.",
+    "Trimestral: cierre de OKRs, calibración con datos reales, nuevo ciclo.",
+    "Regla de honestidad: todo 🎯 tiene fecha de veredicto en ASSUMPTIONS.md; al vencer, se confirma (✅) o se corrige el plan.",
+    "Logro sano de OKR: 0.7 es éxito; 1.0 sistemático = metas flojas.",
+    "Nada de premios individuales atados a un KPI sin su contramétrica."
+  ]
+}

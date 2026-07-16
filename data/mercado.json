@@ -1,0 +1,32 @@
+{
+  "fecha_corte": "2026-07",
+  "contexto_estatal": [
+    {"indicador": "Matrícula educación superior Puebla (incluye posgrado)", "valor": 358706,
+     "fuente": "SEP, Estadística e Indicadores Puebla, ciclo 2024-2025", "marca": "✅"},
+    {"indicador": "Cobertura educación superior Puebla (sin posgrado)", "valor_pct": 51.8,
+     "fuente": "SEP planeacion.sep.gob.mx, 2025", "marca": "✅"},
+    {"indicador": "Cobertura media superior Puebla", "valor_pct": 80.6,
+     "fuente": "SEP, ciclo 2024-2025", "marca": "✅"},
+    {"indicador": "Alumnos en preparatorias Puebla (247,230 en bachillerato general)",
+     "valor": 294861, "fuente": "SEP, ciclo 2024-2025", "marca": "✅"},
+    {"indicador": "Matrícula superior NO escolarizada nacional (~534 mil pública + ~925 mil particular)",
+     "valor": 1459000,
+     "fuente": "SEP Principales Cifras 2024-2025 (análisis Campus Milenio)", "marca": "✅",
+     "nota": "Es el segmento de mayor crecimiento del sistema; las particulares pasaron de 500 a 925 mil en 6 años"}
+  ],
+  "mercado_winback": [
+    {"indicador": "Abandono anual promedio en superior (nacional)", "valor": 279000, "fuente": "SEP/PNES 2026-2030", "marca": "✅"},
+    {"indicador": "Universitarios que interrumpieron estudios 2013-2024 (nacional)", "valor": 3000000, "fuente": "SEP", "marca": "✅"},
+    {"indicador": "Abandono superior (ciclo 2023-24)", "valor_pct": 7.1, "fuente": "SEP, ciclo 2023-24", "marca": "✅"},
+    {"indicador": "Abandono en 1er año de licenciatura", "valor_pct": 30, "fuente": "SEP, 2026", "marca": "✅", "nota": "3 de cada 10 abandonan en el 1er año"},
+    {"indicador": "Bajas históricas CEA 2023-2026 (lista de Angélica)", "valor": null, "nota": "Por llenar cuando se entregue la lista — decisión #5 del memo", "marca": "🎯"}
+  ],
+  "tam_sam_som": {
+    "nota_metodologica": "TAM: población 18-45 con bachillerato sin licenciatura + licenciatura trunca en municipios de influencia (Censo INEGI 2020). SAM: proxy con matrícula no escolarizada municipal (Formato 911). SOM: meta 250.",
+    "por_plaza": [
+      {"plaza": "Puebla", "tam": null, "sam": null, "som": 150, "marca": "🎯", "nota": "TAM/SAM por llenar con Censo INEGI y Formato 911 municipal"},
+      {"plaza": "Huauchinango", "tam": null, "sam": null, "som": 60, "marca": "🎯", "nota": "idem"},
+      {"plaza": "Zacatlán", "tam": null, "sam": null, "som": 40, "marca": "🎯", "nota": "idem"}
+    ]
+  }
+}

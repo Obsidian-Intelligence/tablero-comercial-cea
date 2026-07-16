@@ -1,0 +1,14 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+.DS_Store
+*.env
+.ipynb_checkpoints/
+*.xlsx
+
+# Local dev-tool artifacts, not part of the app
+.claude/settings.local.json
+.superpowers/
+Exceles/

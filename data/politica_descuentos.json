@@ -1,0 +1,22 @@
+{
+  "estatus": "🎯 Borrador de política de descuentos CEA — pendiente de aprobación",
+  "reglas_globales": [
+    "Los descuentos NO son apilables entre sí ni con convenios.",
+    "Tope absoluto: 20% del valor anual del alumno.",
+    "Toda condonación requiere aprobación registrada (fila en Descuentos_Otorgados con evidencia).",
+    "La cuota SEP nunca se descuenta ni se condona.",
+    "Toda promoción vence el 28 de agosto de 2026 (cierre de inscripciones); después, precio de lista sin excepción."
+  ],
+  "por_estrategia": [
+    {"estrategia": "E1 Servicio que vende", "descuento_max": "0%", "logica": "El servicio es el valor; no se descuenta."},
+    {"estrategia": "E2 Regresa y termina", "descuento_max": "Condonación hasta 100% del adeudo HISTÓRICO; mensualidad futura plena (tope 10% solo con aprobación)", "logica": "El adeudo viejo ya es incobrable; regalar el futuro sí cuesta."},
+    {"estrategia": "E3 Tubería interna", "descuento_max": "Beca de continuidad 10% permanente", "logica": "AE resultante 0.90; ya contemplada en el memo."},
+    {"estrategia": "E4 Referidos", "descuento_max": "50% de UNA mensualidad al referente, pagadero cuando el referido complete su 2º pago + 50% de inscripción al referido (una vez)", "logica": "Sin meses gratis: no hay ancho de banda de caja. Recompensa diferida y autofinanciada por el ingreso del nuevo alumno."},
+    {"estrategia": "E5 Convenios", "descuento_max": "Precio convenio oficial ($1,500 lic.); es piso, no apilable", "logica": "Ya existe en tabla oficial de precios."},
+    {"estrategia": "E6 Publicidad pagada", "descuento_max": "0%", "logica": "Su costo es la pauta (CAC), no el precio."},
+    {"estrategia": "E7 Reseñas Google", "descuento_max": "0%", "logica": "Canal orgánico."},
+    {"estrategia": "E8 Radar de empresas", "descuento_max": "0%", "logica": "Alimenta E5; hereda su regla."},
+    {"estrategia": "E9 Campo en la Sierra", "descuento_max": "Inscripción gratis en campaña; mensualidad plena", "logica": "Práctica histórica de CEA en promociones; reduce fricción de entrada sin tocar el recurrente."},
+    {"estrategia": "E10 Ajuste +$150", "descuento_max": "No aplica (es incremento)", "logica": "Sube el AE de cohortes nuevas."}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "fecha_corte": "2026-07",
+  "programas": [
+    {"programa": "Licenciatura (Admón/Contaduría/Derecho)", "plaza": "Puebla",
+     "inscripcion": 1900, "mensualidad_plena": 1800, "mensualidad_convenio": 1500,
+     "reinscripcion": 600, "frecuencia_reinscripcion": "cuatrimestral", "cuota_sep_anual": 700},
+    {"programa": "Bachillerato Sabatino", "plaza": "Puebla",
+     "inscripcion": 600, "mensualidad_plena": 850, "mensualidad_convenio": 700,
+     "reinscripcion": 650, "frecuencia_reinscripcion": "semestral", "cuota_sep_anual": 600},
+    {"programa": "Bachillerato Entresemana", "plaza": "Puebla",
+     "inscripcion": 1700, "mensualidad_plena": 950, "mensualidad_convenio": 850,
+     "reinscripcion": 900, "frecuencia_reinscripcion": "semestral", "cuota_sep_anual": 600},
+    {"programa": "Bachillerato Sabatino", "plaza": "Huauchinango",
+     "inscripcion": 650, "mensualidad_plena": 850, "mensualidad_convenio": null,
+     "reinscripcion": 660, "frecuencia_reinscripcion": "semestral", "cuota_sep_anual": 450},
+    {"programa": "Bachillerato Sabatino", "plaza": "Zacatlán",
+     "inscripcion": 700, "mensualidad_plena": 700, "mensualidad_convenio": null,
+     "reinscripcion": 600, "frecuencia_reinscripcion": "semestral", "cuota_sep_anual": 450},
+    {"programa": "Maestría Derecho Penal Acusatorio", "plaza": "Puebla",
+     "inscripcion": 1950, "mensualidad_plena": 2400, "mensualidad_convenio": 1950,
+     "reinscripcion": 2000, "frecuencia_reinscripcion": "anual", "cuota_sep_anual": 750},
+    {"programa": "Ajuste E10 nuevos ingresos", "nota": "+150 MXN a mensualidad de nuevos, pendiente de firma", "marca": "🎯"}
+  ]
+}
