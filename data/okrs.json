@@ -1,5 +1,5 @@
 {
-  "fecha_actualizacion": "2026-07-14",
+  "fecha_actualizacion": "2026-07-17",
   "norte": {
     "titular": "250 alumnos activos hacia jul-2027, cruzando el punto de equilibrio (207) en feb–mar 2027, con el canal de recomendación restaurado a ≥30% de las altas y cobranza ≥90% del facturable.",
     "metrica_estrella": "ALUMNOS ACTIVOS (Excel maestro, semanal)."
@@ -81,31 +81,31 @@
     }
   },
   "iniciativas": [
-    {"id": "INI-00", "iniciativa": "War room + tablero + cohortes", "dueno": "Obsidian", "krs": "KR3.1–3.5 (habilita todos)", "incluye": "Tablero 10 KPIs + comité lunes", "costo": "—"},
-    {"id": "INI-E1", "iniciativa": "Servicio que vende (retención)", "dueno": "Mónica/Nelly + coordinadoras", "krs": "KR2.1, KR2.5", "incluye": "Folio+acuse 24h · NPS 1 pregunta · llamada de bienvenida 2º sábado", "costo": "$0"},
-    {"id": "INI-E2", "iniciativa": "Regresa y termina (recuperación)", "dueno": "Asesoras + Angélica", "krs": "KR2.3, KR1.1", "incluye": "Lista bajas 23-26 · guion sin culpa · convenio con condonación condicionada", "costo": "$0", "alerta": "PERECEDERO: Angélica se retira en ~4 meses"},
-    {"id": "INI-E3", "iniciativa": "Tubería bachillerato→licenciatura", "dueno": "Gasga + asesoras", "krs": "KR1.1", "incluye": "Plática 15 min en aula · beca continuidad 10% 🎯", "costo": "Beca 10%"},
+    {"id": "INI-00", "iniciativa": "War room + tablero + cohortes", "dueno": "Alfonso", "krs": "KR3.1–3.5 (habilita todos)", "incluye": "Tablero 10 KPIs + comité lunes", "costo": "—"},
+    {"id": "INI-E1", "iniciativa": "Servicio que vende (retención)", "dueno": "Atención en sede + coordinadoras", "krs": "KR2.1, KR2.5", "incluye": "Folio+acuse 24h · NPS 1 pregunta · llamada de bienvenida 2º sábado", "costo": "$0"},
+    {"id": "INI-E2", "iniciativa": "Regresa y termina (recuperación)", "dueno": "Asesoría comercial + Control Escolar", "krs": "KR2.3, KR1.1", "incluye": "Lista bajas 23-26 · guion sin culpa · convenio con condonación condicionada", "costo": "$0"},
+    {"id": "INI-E3", "iniciativa": "Tubería bachillerato→licenciatura", "dueno": "Dirección Académica + asesoría comercial", "krs": "KR1.1", "incluye": "Plática 15 min en aula · beca continuidad 10% 🎯", "costo": "Beca 10%"},
     {"id": "INI-E4", "iniciativa": "Referidos \"Trae a tu compañero\"", "dueno": "Coordinadoras", "krs": "KR2.2, KR1.1", "incluye": "1 mes gratis al que refiere (paga 2ª mensualidad del referido) · 50% inscripción al referido 🎯 · estímulo docente $300–500 🎯", "costo": "Se paga solo con resultados"},
-    {"id": "INI-E5", "iniciativa": "Convenios B2B (canal del dueño)", "dueno": "Eduardo + asesora sr.", "krs": "KR1.1, Q4", "incluye": "Cartera despacho · carta modelo · COPARMEX Puebla · meta 4 firmas/90 días", "costo": "~$0"},
-    {"id": "INI-E6", "iniciativa": "Pauta Meta hiperlocal", "dueno": "C. Gutiérrez + Obsidian", "krs": "KR1.4, KR1.1, KR3.5", "incluye": "CPL $60–150 🎯 · regla dura: matar >$2,000/inscripción 2 meses; duplicar <$1,200", "costo": "$6–8K/mes"},
-    {"id": "INI-E7", "iniciativa": "Ficha Google + reseñas", "dueno": "C. Gutiérrez", "krs": "KR2.4, KR1.4", "incluye": "3 fichas reclamadas · QR en entrega de certificados · responder todo <72h", "costo": "$0"},
-    {"id": "INI-E8", "iniciativa": "Hermes (radar B2B con IA)", "dueno": "Obsidian", "krs": "Alimenta E5", "incluye": "10 oportunidades calificadas/mes · humano aprueba SIEMPRE · solo fuentes públicas (LFPDPPP)", "costo": "—"},
-    {"id": "INI-E9", "iniciativa": "Campo Sierra (HUA/ZAC)", "dueno": "Margarita · Teresa/Jesús", "krs": "KR1.4, KR1.1", "incluye": "Perifoneo · radio · lonas QR · módulo en tianguis con alumno testimonio", "costo": "$1.5–3K/mes temporada"},
-    {"id": "INI-E10", "iniciativa": "+$150 a nuevos ingresos", "dueno": "Eduardo + Paola", "krs": "KR4.1, equilibrio", "incluye": "Tabla única de precios · equivale a +25 alumnos sin costo de adquisición 📊", "costo": "$0 directo"}
+    {"id": "INI-E5", "iniciativa": "Convenios B2B (canal del dueño)", "dueno": "Docente enlace empresarial", "krs": "KR1.1, Q4", "incluye": "CEA Dirección aporta la cartera de contactos · carta modelo · COPARMEX Puebla · meta 4 firmas/90 días", "costo": "~$0"},
+    {"id": "INI-E6", "iniciativa": "Pauta Meta hiperlocal", "dueno": "Mercadotecnia + Alfonso", "krs": "KR1.4, KR1.1, KR3.5", "incluye": "CPL $60–150 🎯 · regla dura: matar >$2,000/inscripción 2 meses; duplicar <$1,200", "costo": "$6–8K/mes"},
+    {"id": "INI-E7", "iniciativa": "Ficha Google + reseñas", "dueno": "Mercadotecnia", "krs": "KR2.4, KR1.4", "incluye": "3 fichas reclamadas · QR en entrega de certificados · responder todo <72h", "costo": "$0"},
+    {"id": "INI-E8", "iniciativa": "Hermes (radar B2B con IA)", "dueno": "Alfonso", "krs": "Alimenta E5", "incluye": "10 oportunidades calificadas/mes · humano aprueba SIEMPRE · solo fuentes públicas (LFPDPPP)", "costo": "—"},
+    {"id": "INI-E9", "iniciativa": "Campo Sierra (HUA/ZAC)", "dueno": "Coordinación Sierra (ZAC/HUA)", "krs": "KR1.4, KR1.1", "incluye": "Perifoneo · radio · lonas QR · módulo en tianguis con alumno testimonio", "costo": "$1.5–3K/mes temporada"},
+    {"id": "INI-E10", "iniciativa": "+$150 a nuevos ingresos", "dueno": "CEA Dirección (firma) + Administración y Finanzas", "krs": "KR4.1, equilibrio", "incluye": "Tabla única de precios · equivale a +25 alumnos sin costo de adquisición 📊", "costo": "$0 directo"}
   ],
   "kpis_permanentes": [
-    {"n": 1, "kpi": "Alumnos activos vs 207 y 250", "fuente": "Excel maestro", "frecuencia": "Semanal", "dueno": "Eduardo", "meta": "Tendencia neta ≥ +10/mes", "contra": "—"},
-    {"n": 2, "kpi": "Prospectos nuevos por canal", "fuente": "Excel de Ventas", "frecuencia": "Semanal", "dueno": "C. Gutiérrez", "meta": "≥66/sem", "contra": "Conversión por canal (volumen basura no vale)"},
-    {"n": 3, "kpi": "Mediana 1ª respuesta", "fuente": "Excel de Ventas/WhatsApp", "frecuencia": "Semanal", "dueno": "Asesoras", "meta": "<5 min 🎯", "contra": "NPS (rápido y mal atendido no sirve)"},
-    {"n": 4, "kpi": "Citas agendadas", "fuente": "Excel de Ventas", "frecuencia": "Semanal", "dueno": "Asesoras", "meta": "≥25/sem 🎯", "contra": "% citas que asisten"},
-    {"n": 5, "kpi": "Inscripciones por canal", "fuente": "Excel maestro", "frecuencia": "Semanal", "dueno": "Paola", "meta": "≥4/sem", "contra": "Bajas a 90 días (inscribir por inscribir revienta)"},
-    {"n": 6, "kpi": "Conversión cohorte 60 días", "fuente": "Excel de Ventas", "frecuencia": "Mensual", "dueno": "Obsidian", "meta": "≥6% 🎯", "contra": "Ticket promedio (no regalar becas para cerrar)"},
-    {"n": 7, "kpi": "Costo por inscripción por canal", "fuente": "Gastos + Excel de Ventas", "frecuencia": "Mensual", "dueno": "Obsidian", "meta": "≤$1,500 ponderado 🎯", "contra": "Volumen (barato sin volumen no escala)"},
+    {"n": 1, "kpi": "Alumnos activos vs 207 y 250", "fuente": "Excel maestro", "frecuencia": "Semanal", "dueno": "CEA Dirección", "meta": "Tendencia neta ≥ +10/mes", "contra": "—"},
+    {"n": 2, "kpi": "Prospectos nuevos por canal", "fuente": "Excel de Ventas", "frecuencia": "Semanal", "dueno": "Mercadotecnia", "meta": "≥66/sem", "contra": "Conversión por canal (volumen basura no vale)"},
+    {"n": 3, "kpi": "Mediana 1ª respuesta", "fuente": "Excel de Ventas/WhatsApp", "frecuencia": "Semanal", "dueno": "Asesoría comercial", "meta": "<5 min 🎯", "contra": "NPS (rápido y mal atendido no sirve)"},
+    {"n": 4, "kpi": "Citas agendadas", "fuente": "Excel de Ventas", "frecuencia": "Semanal", "dueno": "Asesoría comercial", "meta": "≥25/sem 🎯", "contra": "% citas que asisten"},
+    {"n": 5, "kpi": "Inscripciones por canal", "fuente": "Excel maestro", "frecuencia": "Semanal", "dueno": "Administración y Finanzas", "meta": "≥4/sem", "contra": "Bajas a 90 días (inscribir por inscribir revienta)"},
+    {"n": 6, "kpi": "Conversión cohorte 60 días", "fuente": "Excel de Ventas", "frecuencia": "Mensual", "dueno": "Alfonso", "meta": "≥6% 🎯", "contra": "Ticket promedio (no regalar becas para cerrar)"},
+    {"n": 7, "kpi": "Costo por inscripción por canal", "fuente": "Gastos + Excel de Ventas", "frecuencia": "Mensual", "dueno": "Alfonso", "meta": "≤$1,500 ponderado 🎯", "contra": "Volumen (barato sin volumen no escala)"},
     {"n": 8, "kpi": "% altas por referido", "fuente": "Excel maestro", "frecuencia": "Mensual", "dueno": "Coordinadoras", "meta": "≥30% a feb-27", "contra": "Premios pagados vs permanencia"},
     {"n": 9, "kpi": "Bajas del mes", "fuente": "Excel maestro", "frecuencia": "Mensual", "dueno": "Control Escolar", "meta": "≤3 📊", "contra": "Rigidez (retener a la fuerza genera queja)"},
-    {"n": 10, "kpi": "Cobranza % del facturable", "fuente": "Excel maestro", "frecuencia": "Semanal", "dueno": "Paola", "meta": "≥90%", "contra": "Quejas por cobranza (umbral 1/100 mensajes)"},
+    {"n": 10, "kpi": "Cobranza % del facturable", "fuente": "Excel maestro", "frecuencia": "Semanal", "dueno": "Administración y Finanzas", "meta": "≥90%", "contra": "Quejas por cobranza (umbral 1/100 mensajes)"},
     {"n": 11, "kpi": "NPS post-trámite", "fuente": "Encuesta", "frecuencia": "Mensual", "dueno": "Control Escolar", "meta": "≥50 🎯", "contra": "Tasa de respuesta ≥60%"},
-    {"n": 12, "kpi": "Reseñas Google (# y promedio)", "fuente": "Google Business Profile (GBP)", "frecuencia": "Mensual", "dueno": "C. Gutiérrez", "meta": "25/sede, ≥4.6", "contra": "Autenticidad (cero reseñas compradas)"}
+    {"n": 12, "kpi": "Reseñas Google (# y promedio)", "fuente": "Google Business Profile (GBP)", "frecuencia": "Mensual", "dueno": "Mercadotecnia", "meta": "25/sede, ≥4.6", "contra": "Autenticidad (cero reseñas compradas)"}
   ],
   "cadencia": [
     "Lunes 30 min: tablero KPIs + avance KRs + UNA decisión ejecutable.",

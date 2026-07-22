@@ -276,6 +276,34 @@ def fuga_mes_actual_vs_anterior(con: duckdb.DuckDBPyConnection, hoy: dt.date) ->
 
 
 # ------------------------------------------------------------------
+# Primer contacto: prospectos perdidos sin intentos suficientes
+# ------------------------------------------------------------------
+
+def perdidos_sin_contactar(con: duckdb.DuckDBPyConnection) -> dict | None:
+    """% de prospectos Perdido/No responde con <3 intentos_contacto, sobre
+    el total de esa categoría. None si la columna no existe todavía o no
+    tiene ningún dato capturado (Excel viejo sin la columna llena)."""
+    columnas = con.execute("PRAGMA table_info(prospectos_t)").fetchdf()["name"].tolist()
+    if "intentos_contacto" not in columnas:
+        return None
+
+    total, sin_contactar, con_dato = con.execute(
+        """
+        SELECT
+            COUNT(*),
+            SUM(CASE WHEN intentos_contacto < 3 THEN 1 ELSE 0 END),
+            SUM(CASE WHEN intentos_contacto IS NOT NULL THEN 1 ELSE 0 END)
+        FROM prospectos_t
+        WHERE etapa = 'Perdido' AND motivo_perdida = 'No responde'
+        """
+    ).fetchone()
+
+    if not total or not con_dato:
+        return None
+    return {"pct": sin_contactar / total, "total": total, "sin_contactar": sin_contactar}
+
+
+# ------------------------------------------------------------------
 # Cobranza (KPI 10) y lectura de KPI_Manual
 # ------------------------------------------------------------------
 

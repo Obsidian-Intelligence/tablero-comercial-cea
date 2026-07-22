@@ -4,7 +4,7 @@
 
 **Goal:** Generate a reproducible `scripts/generar_excel_ventas.py` (openpyxl) that produces `Excel_de_Ventas_CEA.xlsx` — a 10-sheet Google-Sheets-ready workbook with dropdowns, header comments, conditional formatting and example rows — and extend the existing Streamlit dashboard (`src/`, `tabs/`) so it actually reads the two sheets the spec adds (`KPI_Manual`, `Comité_Lunes`) and the new columns on existing sheets, then update the README with the operational rollout steps.
 
-**Architecture:** This repo (`/home/poncholicious/obsidian-intelligence/ibarragalanis/cea/dashboards/`) already has a working Streamlit tablero reading a Google Sheet called "Excel de Ventas CEA" through `src/sheets.py` → `src/etl.py` → DuckDB → `tabs/*.py`. The workbook spec introduces 3 columns/renames on existing sheets and 2 wholly new sheets (`KPI_Manual`, `Comité_Lunes`) plus `INSTRUCCIONES`. Per the spec's own rule ("si detectas discrepancia con el código existente, ajusta el código, no los nombres de este documento"), the dashboard code is the thing that moves to match the spec's column names — not the other way around. The `.xlsx` generator is a standalone, declarative script: a list of sheet-spec dicts (columns, comments, validation, example rows) consumed by shared helper functions, so every sheet is built the same way instead of 10 near-duplicate blocks.
+**Architecture:** This repo (`/home/poncholicious/obsidian-intelligence/clients/ibarragalanis/cea/dashboards/`) already has a working Streamlit tablero reading a Google Sheet called "Excel de Ventas CEA" through `src/sheets.py` → `src/etl.py` → DuckDB → `tabs/*.py`. The workbook spec introduces 3 columns/renames on existing sheets and 2 wholly new sheets (`KPI_Manual`, `Comité_Lunes`) plus `INSTRUCCIONES`. Per the spec's own rule ("si detectas discrepancia con el código existente, ajusta el código, no los nombres de este documento"), the dashboard code is the thing that moves to match the spec's column names — not the other way around. The `.xlsx` generator is a standalone, declarative script: a list of sheet-spec dicts (columns, comments, validation, example rows) consumed by shared helper functions, so every sheet is built the same way instead of 10 near-duplicate blocks.
 
 **Tech Stack:** Python 3.12, openpyxl (new dependency), pandas, duckdb, streamlit (existing).
 
@@ -71,7 +71,7 @@ KPIS_MANUALES = [
 
 - [ ] **Step 2: Verify it imports cleanly**
 
-Run: `cd /home/poncholicious/obsidian-intelligence/ibarragalanis/cea/dashboards && .venv/bin/python -c "from src.constants import RESPONSABLES, APROBADORES, TIPOS_DESCUENTO, VIGENCIA_DESCUENTO, KR_IDS, KPIS_MANUALES; print(len(RESPONSABLES), len(KR_IDS), len(KPIS_MANUALES))"`
+Run: `cd /home/poncholicious/obsidian-intelligence/clients/ibarragalanis/cea/dashboards && .venv/bin/python -c "from src.constants import RESPONSABLES, APROBADORES, TIPOS_DESCUENTO, VIGENCIA_DESCUENTO, KR_IDS, KPIS_MANUALES; print(len(RESPONSABLES), len(KR_IDS), len(KPIS_MANUALES))"`
 Expected: `8 17 9`
 
 - [ ] **Step 3: Commit**
@@ -94,7 +94,7 @@ Append `openpyxl==3.1.5` to `requirements.txt` (keep alphabetical-ish grouping c
 
 - [ ] **Step 2: Install into the project venv**
 
-Run: `cd /home/poncholicious/obsidian-intelligence/ibarragalanis/cea/dashboards && .venv/bin/pip install openpyxl==3.1.5`
+Run: `cd /home/poncholicious/obsidian-intelligence/clients/ibarragalanis/cea/dashboards && .venv/bin/pip install openpyxl==3.1.5`
 Expected: `Successfully installed openpyxl-3.1.5`
 
 - [ ] **Step 3: Verify**
@@ -495,7 +495,7 @@ In `validar_calidad`, after the `"Alumnos sin evento que lo respalde"` rule, add
 
 Run:
 ```bash
-cd /home/poncholicious/obsidian-intelligence/ibarragalanis/cea/dashboards
+cd /home/poncholicious/obsidian-intelligence/clients/ibarragalanis/cea/dashboards
 .venv/bin/python -c "
 from src import etl
 hojas = etl.generar_datos_demo()
@@ -654,7 +654,7 @@ After the "¿Por qué no llegamos?" section (right before the "6. Calidad de dat
 
 - [ ] **Step 3: Manual smoke check in the running app**
 
-Run: `cd /home/poncholicious/obsidian-intelligence/ibarragalanis/cea/dashboards && .venv/bin/streamlit run app.py --server.headless true &` then open the app (or use the `run` skill) and confirm Tab 2 shows the new "Cobranza y KPIs manuales" row with real numbers (demo mode) and no exceptions in the terminal. Stop the server after checking.
+Run: `cd /home/poncholicious/obsidian-intelligence/clients/ibarragalanis/cea/dashboards && .venv/bin/streamlit run app.py --server.headless true &` then open the app (or use the `run` skill) and confirm Tab 2 shows the new "Cobranza y KPIs manuales" row with real numbers (demo mode) and no exceptions in the terminal. Stop the server after checking.
 
 - [ ] **Step 4: Commit**
 
@@ -1019,7 +1019,7 @@ if __name__ == "__main__":
     main()
 ```
 
-Run: `cd /home/poncholicious/obsidian-intelligence/ibarragalanis/cea/dashboards && .venv/bin/python scripts/generar_excel_ventas.py`
+Run: `cd /home/poncholicious/obsidian-intelligence/clients/ibarragalanis/cea/dashboards && .venv/bin/python scripts/generar_excel_ventas.py`
 Expected: `Escrito .../Excel_de_Ventas_CEA.xlsx con hojas: ['INSTRUCCIONES', 'Config']`, no traceback.
 
 - [ ] **Step 6: Commit**
@@ -1541,7 +1541,7 @@ if __name__ == "__main__":
 
 - [ ] **Step 3: Run the full generator**
 
-Run: `cd /home/poncholicious/obsidian-intelligence/ibarragalanis/cea/dashboards && .venv/bin/python scripts/generar_excel_ventas.py`
+Run: `cd /home/poncholicious/obsidian-intelligence/clients/ibarragalanis/cea/dashboards && .venv/bin/python scripts/generar_excel_ventas.py`
 Expected: `Escrito .../Excel_de_Ventas_CEA.xlsx con hojas: ['INSTRUCCIONES', 'Config', 'Prospectos', 'Eventos', 'Metas', 'Alumnos_Activos', 'Descuentos_Otorgados', 'KPI_Manual', 'OKR_Avance', 'Comité_Lunes']`, no traceback.
 
 - [ ] **Step 4: Write `scripts/verificar_excel_ventas.py`**

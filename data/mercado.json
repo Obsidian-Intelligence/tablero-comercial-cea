@@ -19,7 +19,7 @@
     {"indicador": "Universitarios que interrumpieron estudios 2013-2024 (nacional)", "valor": 3000000, "fuente": "SEP", "marca": "✅"},
     {"indicador": "Abandono superior (ciclo 2023-24)", "valor_pct": 7.1, "fuente": "SEP, ciclo 2023-24", "marca": "✅"},
     {"indicador": "Abandono en 1er año de licenciatura", "valor_pct": 30, "fuente": "SEP, 2026", "marca": "✅", "nota": "3 de cada 10 abandonan en el 1er año"},
-    {"indicador": "Bajas históricas CEA 2023-2026 (lista de Angélica)", "valor": null, "nota": "Por llenar cuando se entregue la lista — decisión #5 del memo", "marca": "🎯"}
+    {"indicador": "Bajas históricas CEA 2023-2026 (lista de Control Escolar)", "valor": null, "nota": "Por llenar cuando se entregue la lista — decisión #5 del memo", "marca": "🎯"}
   ],
   "tam_sam_som": {
     "nota_metodologica": "TAM: población 18-45 con bachillerato sin licenciatura + licenciatura trunca en municipios de influencia (Censo INEGI 2020). SAM: proxy con matrícula no escolarizada municipal (Formato 911). SOM: meta 250.",

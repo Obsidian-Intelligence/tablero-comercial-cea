@@ -68,7 +68,11 @@ def encabezado_tab(pregunta: str) -> None:
 
 
 def banner_demo() -> None:
-    st.warning("⚠️ **MODO DEMO** — sin conexión al Excel de Ventas. Los datos que ves son sintéticos.", icon="⚠️")
+    st.warning(
+        "⚠️ **MODO DEMO** — sin conexión al Excel de Ventas. Los datos que ves son sintéticos. "
+        "Se estará actualizando con los datos que vayamos recopilando todos.",
+        icon="⚠️",
+    )
 
 
 GLOSARIO: dict[str, str] = {

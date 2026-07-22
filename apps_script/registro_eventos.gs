@@ -17,6 +17,12 @@
  * IMPORTANTE: la hoja Eventos la llena SOLO este script. Nunca editarla a
  * mano — el ETL del dashboard usa Eventos para validar que cada alumno tenga
  * un evento que respalde su etapa actual.
+ *
+ * Este script NO necesita tocar las hojas KPI_Manual, OKR_Avance o
+ * Comité_Lunes — esas se llenan directamente a mano por el equipo, no por
+ * transición de etapa. Si en el futuro se agrega una hoja que también deba
+ * quedar registrada automáticamente por edición, dale su propio bloque en
+ * onEdit() en vez de reutilizar HOJA_ORIGEN/HOJA_DESTINO.
  */
 
 const HOJA_ORIGEN = 'Prospectos';

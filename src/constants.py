@@ -24,9 +24,13 @@ ETAPAS = [
 
 MOTIVOS_PERDIDA = ["Precio", "Horario", "Competencia", "No responde", "Otro"]
 
-RESPONSABLES = ["Angélica", "Paola", "Marisol", "Diego", "C. Gutiérrez", "Eduardo", "Obsidian", "Control Escolar"]
+RESPONSABLES = [
+    "Alfonso", "Control Escolar", "Administración y Finanzas", "Seguimiento a prospectos",
+    "Dirección Académica", "Mercadotecnia", "CEA Dirección", "Atención en sede",
+    "Coordinación Sierra (ZAC/HUA)",
+]
 
-APROBADORES = ["Eduardo", "Paola"]
+APROBADORES = ["Administración y Finanzas", "Dirección Académica", "CEA Dirección"]
 
 TIPOS_DESCUENTO = [
     "Beca %",
