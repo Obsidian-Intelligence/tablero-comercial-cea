@@ -25,7 +25,7 @@ from src.constants import (
 )
 
 # Columnas con PII: se descartan antes de cualquier otra operación.
-COLUMNAS_PII = ["telefono", "notas"]
+COLUMNAS_PII = ["telefono", "telefono_alt", "email", "nombre_prospecto", "notas"]
 
 
 # ------------------------------------------------------------------
@@ -88,6 +88,7 @@ def generar_datos_demo(seed: int = 42) -> dict[str, pd.DataFrame]:
             "responsable": responsables,
             "telefono": [f"222{rng.integers(1000000, 9999999)}" for _ in range(n)],
             "notas": ["" for _ in range(n)],
+            "intentos_contacto": rng.integers(0, 6, size=n),
         }
     )
 
@@ -148,7 +149,7 @@ def generar_datos_demo(seed: int = 42) -> dict[str, pd.DataFrame]:
                 "estrategia": "Total",
                 "meta_alumnos": total_meta_alumnos,
                 "meta_prospectos": sum(r["meta_prospectos"] for r in metas_rows if r["semana_iso"] == semana_iso),
-                "responsable": "Eduardo",
+                "responsable": "CEA Dirección",
                 "comentario_cierre": "",
             }
         )
@@ -290,7 +291,7 @@ def generar_datos_demo(seed: int = 42) -> dict[str, pd.DataFrame]:
             {
                 "fecha": lunes,
                 "semana_iso": semana_iso,
-                "asistentes": "Eduardo, Paola, C. Gutiérrez, Obsidian",
+                "asistentes": "CEA Dirección, Administración y Finanzas, Mercadotecnia, Alfonso",
                 "alumnos_activos_hoy": alumnos_ese_dia,
                 "kpis_en_rojo": ", ".join(rojos),
                 "krs_movidos": "KR1.2 subió por inscripciones de la semana.",

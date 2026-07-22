@@ -12,9 +12,13 @@ from src.constants import (
     ALUMNOS_HOY_DEMO,
     CAC_E6_UMBRAL,
     CIERRE_PROMOCIONES,
+    COLOR_GRIS,
+    COLOR_ROJO,
+    COLOR_VERDE,
     META_ALUMNOS,
     NOMBRES_ESTRATEGIAS,
     PLAZAS,
+    PROGRAMAS,
     PUNTO_EQUILIBRIO,
     color_semaforo,
 )
@@ -74,6 +78,67 @@ def render(con, hojas, es_demo: bool) -> None:
         st.caption(f"A ritmo actual, cruzamos {PUNTO_EQUILIBRIO} el **{fecha_cruce_207.strftime('%d-%b-%Y')}** 📊")
     else:
         st.caption("Faltan datos suficientes de cortes semanales para proyectar la fecha de cruce 📊")
+
+    st.divider()
+
+    # ------------------------------------------------------------------
+    # 1b. ¿Dónde están los alumnos?
+    # ------------------------------------------------------------------
+    st.markdown("**¿Dónde están los alumnos?**")
+    if not alumnos_activos.empty:
+        fechas_disponibles = sorted(alumnos_activos["fecha_corte"].unique())
+        corte_actual = pd.Timestamp(fechas_disponibles[-1])
+        corte_anterior = pd.Timestamp(fechas_disponibles[-2]) if len(fechas_disponibles) > 1 else None
+
+        df_actual = alumnos_activos[alumnos_activos["fecha_corte"] == corte_actual]
+
+        pivote = (
+            df_actual.pivot_table(index="plaza", columns="programa", values="total_activos", aggfunc="sum", fill_value=0)
+            .reindex(index=PLAZAS, columns=PROGRAMAS, fill_value=0)
+        )
+        pivote["Total"] = pivote.sum(axis=1)
+
+        def _variacion(diff: int) -> str:
+            if diff > 0:
+                return f"▲ +{diff}"
+            if diff < 0:
+                return f"▼ {diff}"
+            return "→ 0"
+
+        if corte_anterior is not None:
+            df_anterior = alumnos_activos[alumnos_activos["fecha_corte"] == corte_anterior]
+            totales_anterior = df_anterior.groupby("plaza")["total_activos"].sum().reindex(PLAZAS, fill_value=0)
+            pivote["Variación"] = [
+                _variacion(int(pivote.loc[p, "Total"] - totales_anterior[p])) for p in PLAZAS
+            ]
+        else:
+            pivote["Variación"] = "—"
+
+        fila_total = pivote.drop(columns="Variación").sum(numeric_only=True)
+        fila_total["Variación"] = (
+            _variacion(int(pivote["Total"].sum() - totales_anterior.sum())) if corte_anterior is not None else "—"
+        )
+        fila_total.name = "Total"
+        pivote = pd.concat([pivote, fila_total.to_frame().T])
+
+        st.dataframe(pivote, use_container_width=True)
+
+        fig_plaza = go.Figure()
+        df_barras = df_actual.groupby(["plaza", "programa"], as_index=False)["total_activos"].sum()
+        for programa in PROGRAMAS:
+            sub = df_barras[df_barras["programa"] == programa].set_index("plaza").reindex(PLAZAS, fill_value=0)
+            fig_plaza.add_bar(name=programa, x=PLAZAS, y=sub["total_activos"])
+        fig_plaza.update_layout(
+            barmode="stack", height=340, margin=dict(t=20, b=10, l=10, r=10), yaxis_title="Alumnos activos"
+        )
+        st.plotly_chart(fig_plaza, use_container_width=True)
+
+        st.caption(
+            f"_Fuente única: hoja Alumnos_Activos del Excel de Ventas, corte del {corte_actual.strftime('%d-%b-%Y')}. "
+            "Se estará actualizando con los datos que vayamos recopilando todos._"
+        )
+    else:
+        st.info("Sin datos de Alumnos_Activos todavía.")
 
     st.divider()
 
@@ -144,6 +209,24 @@ def render(con, hojas, es_demo: bool) -> None:
             col.metric(row["etapa"], f"{row['conteo']}", f"{dias:.1f} días" if pd.notna(dias) else "—")
     else:
         st.info("No hay prospectos que coincidan con el filtro.")
+
+    resultado_contacto = kpis.perdidos_sin_contactar(con)
+    if resultado_contacto is None:
+        ui.tarjeta_semaforo("⚪ Perdidos sin contactar", "Por llenar", COLOR_GRIS, "")
+    else:
+        pct_sin_contactar = resultado_contacto["pct"]
+        en_rojo = pct_sin_contactar > 0.15
+        ui.tarjeta_semaforo(
+            f"{'🔴' if en_rojo else '🟢'} Perdidos sin contactar",
+            f"{pct_sin_contactar:.0%}",
+            COLOR_ROJO if en_rojo else COLOR_VERDE,
+            "🎯 Meta: por debajo de 15%" if en_rojo else "",
+        )
+    st.caption(
+        "_De los prospectos marcados 'Perdido — No responde', qué % en realidad nunca llegamos "
+        "a buscar 3 veces. Si sale en rojo, probablemente los estamos perdiendo por no insistir, "
+        "no porque de verdad ya no quisieran._"
+    )
 
     st.divider()
 

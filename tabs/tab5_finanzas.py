@@ -107,7 +107,7 @@ def render(con, hojas, es_demo: bool) -> None:
     c1, c2, c3 = st.columns(3)
     c1.metric("IMR (Ingreso Mensual Recurrente Real)", f"${imr_real:,.0f}")
     c2.metric("IMR de equilibrio (costos fijos)", f"${imr_equilibrio:,.0f}",
-              help="Suma de costos_fijos.json — incompleto hasta que Paola llene los placeholders")
+              help="Suma de costos_fijos.json — incompleto hasta que Administración y Finanzas llene los placeholders")
     if renglones_faltantes:
         st.caption(f"Equilibrio parcial: faltan {renglones_faltantes} renglones por llenar 📊")
     color = color_ae(ae_portafolio)
